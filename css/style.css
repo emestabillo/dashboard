@@ -17,7 +17,7 @@ body {
   color: white; }
 
 header {
-  padding-bottom: 1rem; }
+  padding-bottom: 2.5rem; }
   header .title h1 {
     margin: 0;
     font-size: 1.5rem;
@@ -27,28 +27,47 @@ header {
     color: #8b97c6; }
   header hr {
     margin: 1.5rem 0;
+    color: #8b97c6;
     border: 1px solid #8b97c62e; }
   header .slider {
-    display: flex; }
-    header .slider__bar {
-      width: 45px;
-      height: 15px;
-      background: #555;
-      margin-left: auto;
+    display: flex;
+    align-items: center; }
+    header .slider h5 {
+      color: #8b97c6;
+      font-size: 0.9rem; }
+    header .slider .switch {
       position: relative;
-      border-radius: 5px; }
-      header .slider__bar input[type="checkbox"] {
+      display: inline-block;
+      width: 3.7rem;
+      height: 1.9rem;
+      margin-left: auto; }
+      header .slider .switch input {
         visibility: hidden; }
-      header .slider__bar label {
-        display: block;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        transition: all 0.5s ease;
-        cursor: pointer;
+      header .slider .switch .slider {
         position: absolute;
-        top: -3px;
-        left: -3px;
-        background: #ccc; }
-      header .slider__bar input[type="checkbox"]:checked + label {
-        left: 27px; }
+        cursor: pointer;
+        border-radius: 34px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, #378fe6, #3eda82);
+        -webkit-transition: 0.4s;
+        transition: 0.4s; }
+        header .slider .switch .slider::before {
+          position: absolute;
+          content: "";
+          height: 1.5rem;
+          width: 1.5rem;
+          left: 4px;
+          bottom: 3px;
+          border-radius: 50%;
+          background-color: #1e202a;
+          -webkit-transition: 0.4s;
+          transition: 0.4s; }
+      header .slider .switch .light {
+        background: #8b97c6; }
+      header .slider .switch input:checked + .slider:before {
+        -webkit-transform: translateX(1.7rem);
+        -ms-transform: translateX(1.7rem);
+        transform: translateX(1.7rem); }
