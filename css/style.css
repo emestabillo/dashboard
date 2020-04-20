@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Inter", sans-serif; }
+
+.container {
+  padding: 10vw 8vw;
+  background: #1e202a;
+  color: white; }
+
+header {
+  padding-bottom: 1rem; }
+  header .title h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem; }
+  header .title h5 {
+    font-size: 0.9rem;
+    color: #8b97c6; }
+  header hr {
+    margin: 1.5rem 0;
+    border: 1px solid #8b97c62e; }
+  header .slider {
+    display: flex; }
+    header .slider__bar {
+      width: 45px;
+      height: 15px;
+      background: #555;
+      margin-left: auto;
+      position: relative;
+      border-radius: 5px; }
+      header .slider__bar input[type="checkbox"] {
+        visibility: hidden; }
+      header .slider__bar label {
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        background: #ccc; }
+      header .slider__bar input[type="checkbox"]:checked + label {
+        left: 27px; }

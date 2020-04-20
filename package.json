@@ -1,0 +1,26 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "social media dashboard with theme switcher",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emestabillo/dashboard.git"
+  },
+  "author": "Emmilie Estabillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emestabillo/dashboard/issues"
+  },
+  "homepage": "https://github.com/emestabillo/dashboard#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
