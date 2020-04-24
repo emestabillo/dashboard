@@ -11,9 +11,7 @@ html {
 body {
   font-family: "Inter", sans-serif;
   background: #1e202a;
-  font-size: 87.5%; }
-
-.container {
+  font-size: 87.5%;
   padding: 2rem;
   background: #1e202a;
   color: white;
@@ -42,27 +40,27 @@ header {
     @media screen and (min-width: 768px) {
       header hr {
         display: none; } }
-  header .slider {
+  header .toggle {
     display: flex;
     align-items: center; }
     @media screen and (min-width: 768px) {
-      header .slider {
+      header .toggle {
         margin-left: auto; } }
-    header .slider h5 {
+    header .toggle h5 {
       color: #8b97c6;
       font-size: 0.9rem; }
       @media screen and (min-width: 768px) {
-        header .slider h5 {
+        header .toggle h5 {
           padding-right: 1rem; } }
-    header .slider .switch {
+    header .toggle .switch {
       position: relative;
       display: inline-block;
       width: 3.4rem;
       height: 1.6rem;
       margin-left: auto; }
-      header .slider .switch input {
+      header .toggle .switch input {
         visibility: hidden; }
-      header .slider .switch .slider {
+      header .toggle .switch .slider {
         position: absolute;
         cursor: pointer;
         border-radius: 34px;
@@ -73,7 +71,7 @@ header {
         background: linear-gradient(to right, #378fe6, #3eda82);
         -webkit-transition: 0.4s;
         transition: 0.4s; }
-        header .slider .switch .slider::before {
+        header .toggle .switch .slider::before {
           position: absolute;
           content: "";
           height: 1.3rem;
@@ -84,7 +82,7 @@ header {
           background-color: #1e202a;
           -webkit-transition: 0.4s;
           transition: 0.4s; }
-      header .slider .switch input:checked + .slider:before {
+      header .toggle .switch input:checked + .slider:before {
         -webkit-transform: translateX(1.7rem);
         -ms-transform: translateX(1.7rem);
         transform: translateX(1.7rem); }
@@ -93,9 +91,16 @@ header {
   background: #252a41;
   border-radius: 0.5rem; }
 
-.light {
+.light-card {
+  background: #f0f2fa;
+  color: #000; }
+
+.light-bg {
   background: white;
-  color: #fff; }
+  color: #000; }
+
+.light-slider {
+  background: #aeb3cb; }
 
 .platforms {
   display: grid;
