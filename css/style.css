@@ -39,6 +39,10 @@ body {
   margin: 0 auto;
   position: relative; }
 
+.card {
+  background: #252a41;
+  border-radius: 0.5rem; }
+
 header {
   padding-bottom: 2.5rem; }
   @media screen and (min-width: 768px) {
@@ -82,9 +86,9 @@ header {
       header .toggle .switch input {
         visibility: hidden; }
       header .toggle .switch input:checked + .slider:before {
-        -webkit-transform: translateX(1.7rem);
-        -ms-transform: translateX(1.7rem);
-        transform: translateX(1.7rem); }
+        -webkit-transform: translateX(1.6rem);
+        -ms-transform: translateX(1.6rem);
+        transform: translateX(1.6rem); }
 
 .slider {
   position: absolute;
@@ -108,28 +112,6 @@ header {
     background-color: #1e202a;
     -webkit-transition: 0.4s;
     transition: 0.4s; }
-
-.card {
-  background: #252a41;
-  border-radius: 0.5rem; }
-
-.light-card {
-  background: #f0f2fa;
-  color: #000; }
-
-.light-bg {
-  background: white;
-  color: #000; }
-  .light-bg::before {
-    background: #f5f7ff; }
-
-.gray-text {
-  color: #1e202a; }
-
-.light-slider {
-  background: #aeb3cb; }
-  .light-slider::before {
-    background: #fff; }
 
 .platforms {
   display: grid;
@@ -184,7 +166,9 @@ header {
       letter-spacing: 0.35rem; }
     .platforms__large .stats {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 700; }
       .platforms__large .stats img {
         height: 0.25rem;
         margin-right: 0.25rem; }
@@ -223,7 +207,8 @@ header {
   .reactions__figures .percentage {
     display: flex;
     align-items: center;
-    padding-top: 0.9rem; }
+    padding-top: 0.3rem;
+    font-weight: 700; }
     .reactions__figures .percentage img {
       margin-right: 0.2rem; }
     .reactions__figures .percentage p {
@@ -247,3 +232,21 @@ header {
     color: #b4bde4; }
     .attribution a:hover {
       color: #f0f2fa; }
+
+.light-card {
+  background: #f0f2fa;
+  color: #000; }
+
+.light-bg {
+  background: white;
+  color: #1e202a; }
+  .light-bg::before {
+    background: #f5f7ff; }
+
+.gray-text {
+  color: #63687e; }
+
+.light-slider {
+  background: #aeb3cb; }
+  .light-slider::before {
+    background: #fff; }

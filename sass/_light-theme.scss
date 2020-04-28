@@ -1,0 +1,25 @@
+.light-card {
+  background: $color-light-card-bg;
+  color: #000;
+}
+
+.light-bg {
+  background: $color-white;
+  // color: #000;
+  color: hsl(230, 17%, 14%);
+  &::before {
+    background: $color-light-top-bg;
+  }
+}
+
+.gray-text {
+  color: $color-light-gray-blue;
+}
+
+.light-slider {
+  background: $color-light-toggle;
+
+  &::before {
+    background: #fff;
+  }
+}
