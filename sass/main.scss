@@ -26,9 +26,7 @@ $color-dark-text-blue: hsl(228, 34%, 66%);
 $color-light-toggle: hsl(230, 22%, 74%);
 $color-light-top-bg: hsl(225, 100%, 98%);
 $color-light-card-bg: hsl(227, 47%, 96%);
-$color-light-gray-blue: hsl(228, 12%, 44%);
-
-// }
+$color-light-gray-blue: hsl(228, 12%, 44%); // text h1
 
 //RESET CSS
 *,
@@ -37,6 +35,13 @@ $color-light-gray-blue: hsl(228, 12%, 44%);
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+html,
+body {
+  @media screen and (min-width: 1072px) {
+    height: 100%;
+  }
 }
 
 html {
@@ -48,20 +53,31 @@ body {
   background: $color-dark-bg;
   font-size: 87.5%; //14px
   padding: 2rem;
-  background: $color-dark-bg;
   color: $color-white;
-  max-width: 1200px;
-  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: $color-dark-top-bg;
+    width: 100%;
+    height: 32%;
+    top: 0;
+    left: 0;
+    @media screen and (max-width: 1071px) {
+      display: none;
+    }
+  }
 }
 
-//HEADER
-// .container {
-//   // padding: 2rem;
-//   // background: $color-dark-bg;
-//   // color: $color-white;
-//   // max-width: 1200px;
-//   // margin: 0 auto;
-// }
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
 
 header {
   padding-bottom: 2.5rem;
@@ -125,37 +141,6 @@ header {
         visibility: hidden;
       }
 
-      .slider {
-        position: absolute;
-        cursor: pointer;
-        border-radius: 34px;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-          to right,
-          hsl(210, 78%, 56%),
-          hsl(146, 68%, 55%)
-        );
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-
-        //circle
-        &::before {
-          position: absolute;
-          content: "";
-          height: 1.3rem;
-          width: 1.3rem;
-          left: 4px;
-          bottom: 3px;
-          border-radius: 50%;
-          background-color: $color-dark-bg;
-          -webkit-transition: 0.4s;
-          transition: 0.4s;
-        }
-      }
-
       input:checked + .slider:before {
         -webkit-transform: translateX(1.7rem);
         -ms-transform: translateX(1.7rem);
@@ -164,24 +149,61 @@ header {
     }
   }
 }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 1.3rem;
+    width: 1.3rem;
+    left: 4px;
+    bottom: 3px;
+    border-radius: 50%;
+    background-color: $color-dark-bg;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
 ////////////////////////////////////
 .card {
   background: $color-dark-card-bg;
   border-radius: 0.5rem;
 }
 .light-card {
-  background: hsl(227, 47%, 96%);
+  background: $color-light-card-bg;
   color: #000;
 }
 
 .light-bg {
   background: $color-white;
   color: #000;
+  &::before {
+    background: $color-light-top-bg;
+  }
+}
+
+.gray-text {
+  color: $color-dark-bg;
 }
 
 // light theme background on slider
 .light-slider {
   background: $color-light-toggle;
+
+  &::before {
+    background: #fff;
+  }
 }
 
 // $color-light-toggle: hsl(230, 22%, 74%);
@@ -290,19 +312,14 @@ header {
 //OVERVIEW SECTION
 .overview {
   &__title {
-    // font-size: 1.6rem;
-    letter-spacing: 1px;
-    // padding-top: 1.5rem;
     padding-top: 1.8rem;
     padding-bottom: 1rem;
-    // padding-bottom: 2rem;
   }
   &__tabs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     column-gap: 1rem;
     row-gap: 1rem;
-    // padding: 2rem 0;
     padding-bottom: 1rem;
   }
 }
