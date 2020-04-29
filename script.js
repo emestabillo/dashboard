@@ -1,8 +1,12 @@
-const cards = Array.from(document.querySelectorAll(".card"));
 const toggle = document.querySelector(".switch");
-const slider = document.querySelector(".slider");
 const body = document.querySelector("body");
-const overview = document.querySelector(".overview__title");
+const slider = document.querySelector(".slider");
+const cards = Array.from(document.querySelectorAll(".card"));
+const gray_text = Array.from(
+  document.querySelectorAll(
+    ".reactions__heading h5, .name, .title h5, .overview__title, .followers p, .attribution a"
+  )
+);
 
 toggle.addEventListener("change", changeTheme);
 
@@ -12,7 +16,9 @@ function changeTheme() {
 
     slider.classList.toggle("light-slider");
 
-    overview.classList.toggle("gray-text");
+    for (var i = 0; i < gray_text.length; i++) {
+      gray_text[i].classList.toggle("gray-text");
+    }
 
     for (var i = 0; i < cards.length; i++) {
       cards[i].classList.toggle("light-card");
