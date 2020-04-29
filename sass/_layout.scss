@@ -117,9 +117,10 @@ header {
     }
 
     .followers {
-      h1 {
+      .number {
         font-size: 3rem;
         text-align: center;
+        font-weight: 700;
       }
 
       p {
@@ -191,11 +192,15 @@ header {
   }
 
   &__figures {
+    h3 {
+      font-size: 1.5rem;
+    }
     .percentage {
       display: flex;
       align-items: center;
       padding-top: 0.3rem;
       font-weight: 700;
+
       img {
         margin-right: 0.2rem;
       }

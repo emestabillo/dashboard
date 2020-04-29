@@ -161,9 +161,10 @@ header {
       .platforms__large .user img {
         height: 1.5rem;
         width: 1.5rem; }
-    .platforms__large .followers h1 {
+    .platforms__large .followers .number {
       font-size: 3rem;
-      text-align: center; }
+      text-align: center;
+      font-weight: 700; }
     .platforms__large .followers p {
       text-transform: uppercase;
       color: #8b97c6;
@@ -209,6 +210,8 @@ header {
     .reactions__heading img {
       width: 1.3rem;
       height: 1.3rem; }
+  .reactions__figures h3 {
+    font-size: 1.5rem; }
   .reactions__figures .percentage {
     display: flex;
     align-items: center;
