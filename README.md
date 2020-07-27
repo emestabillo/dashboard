@@ -1,6 +1,7 @@
 # Frontend Mentor - Social media dashboard with theme switcher
 
 ## Live link: https://em-estabillo-dashboard.netlify.app
+### Solution page on Frontend Mentor: https://www.frontendmentor.io/solutions/dashboard-theme-switcher-using-flex-grid-js-Gr6rgcsxZ
 
 ![Design preview for the Social media dashboard with theme switcher coding challenge](./design/desktop-preview.jpg)
 
